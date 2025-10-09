@@ -18,6 +18,13 @@ If you have a bug to report about the [pretty CSS Cheat Sheet](https://admm.co/c
   * [Animations & Transitions](#animations)
   * [Modern Layout](#modern-layout)
   * [Dynamic Content](#dynamic-content)
+  * [Scroll Snap](#scroll-snap)
+  * [CSS :has() Selector](#css-has-selector)
+  * [CSS Cascade Layers](#css-cascade-layers)
+  * [CSS Scoping](#css-scoping)
+  * [View Transitions API](#view-transitions-api)
+  * [CSS Anchor Positioning](#css-anchor-positioning)
+  * [Advanced CSS Features](#advanced-css-features)
 
 ---
 
@@ -298,6 +305,98 @@ Counter Increment `counter-increment: name-of-counter`
 Counter Dynamic Value `content: counter(name-of-counter)`
 
 Attribute Dynamic Value `content: attr(name-of-attribute)`
+
+---
+
+### Scroll Snap
+
+Scroll Snap Type `scroll-snap-type: none | x | y | both | block | inline`
+
+Scroll Snap Align `scroll-snap-align: none | start | end | center`
+
+Scroll Snap Stop `scroll-snap-stop: normal | always`
+
+Scroll Snap Padding `scroll-snap-padding: 10px | 10px 20px`
+
+Scroll Snap Margin `scroll-snap-margin: 10px | 10px 20px`
+
+---
+
+### CSS :has() Selector
+
+Has Child Element `div:has(> img) { }`
+
+Has Sibling Element `h1:has(+ p) { }`
+
+Has Multiple Elements `form:has(input:invalid) { }`
+
+Has Focused Element `div:has(:focus) { }`
+
+Has Empty State `ul:has(li:only-child) { }`
+
+---
+
+### CSS Cascade Layers
+
+Layer Declaration `@layer base, components, utilities;`
+
+Layer Block `@layer components { .btn { } }`
+
+Layer Import `@import "styles.css" layer(utilities);`
+
+Layer Nesting `@layer framework.components { }`
+
+---
+
+### CSS Scoping
+
+Scope Declaration `@scope (.card) to (.card-footer) { }`
+
+Scope Root Only `@scope (.component) { .title { } }`
+
+Scope with Limits `@scope (.modal) to (.modal-overlay) { }`
+
+---
+
+### View Transitions API
+
+View Transition Name `view-transition-name: hero-image;`
+
+View Transition Group `::view-transition-group(hero-image) { }`
+
+View Transition Image `::view-transition-image-pair(hero-image) { }`
+
+View Transition Old `::view-transition-old(hero-image) { }`
+
+View Transition New `::view-transition-new(hero-image) { }`
+
+---
+
+### CSS Anchor Positioning
+
+Anchor Name `anchor-name: --my-anchor;`
+
+Anchor Side `anchor-side: bottom;`
+
+Anchor Position `position-anchor: --my-anchor;`
+
+Anchor Function `top: anchor(--my-anchor bottom);`
+
+---
+
+### Advanced CSS Features
+
+Color Mix `color-mix(in srgb, red 30%, blue);`
+
+Relative Color `color: hsl(from red h s calc(l + 20%));`
+
+CSS Nesting `.parent { & .child { } }`
+
+CSS Trigonometry `transform: rotate(sin(45deg) * 10px);`
+
+CSS Stepped Functions `animation-timing-function: steps(4, jump-both);`
+
+CSS Masonry `grid-template-rows: masonry;`
 
 ---
 
